@@ -27,13 +27,13 @@ const ErrorPage = () => {
         <p className=' px-4 pb-10 text-center text-2xl leading-none text-emerald-50'>
           Вибачте, запитана сторінка не знайдена. Будь ласка, перевірте
           <br />
-          правильність введеного URL або зв'яжіться з адміністратором <br />{' '}
-          сайту для отримання допомоги{' '}
+          правильність введеного URL або зв'яжіться з адміністратором <br />
+          сайту для отримання допомоги
         </p>
-        <div className='flex justify-center'>
+        <div className='text-center'>
           <button
             onClick={goBack}
-            className='h-10 w-44 text-wrap rounded-md border bg-blue-700 text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50'
+            className='bg-amber mb-10 h-10 w-44 text-wrap rounded-md border text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50'
           >
             На головну
           </button>
