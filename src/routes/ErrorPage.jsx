@@ -35,7 +35,7 @@ const ErrorPage = () => {
             onClick={goBack}
             className='h-10 w-44 text-wrap rounded-md border bg-blue-700 text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50'
           >
-            Go Back
+            На головну
           </button>
         </div>
       </div>
