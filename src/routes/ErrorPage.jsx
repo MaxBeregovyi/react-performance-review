@@ -9,7 +9,7 @@ const ErrorPage = () => {
   }
 
   return (
-    <div className='flex h-screen justify-center bg-gradient-to-r from-fuchsia-600 to-orange-600 hover:to-fuchsia-900 '>
+    <div className='flex h-screen justify-center bg-gradient-to-r from-fuchsia-600 to-orange-600 hover:to-blue-700 '>
       <div className={'absolute'}>
         <img
           className={'relative top-32 pl-20'}
