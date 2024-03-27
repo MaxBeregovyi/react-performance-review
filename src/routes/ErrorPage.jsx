@@ -22,7 +22,7 @@ const ErrorPage = () => {
           alt=''
         />
         <h1 className='px-4 pb-12 pt-8 text-center text-7xl font-bold leading-10 text-gray-800'>
-          Стояночка!{' '}
+          Стояночка!
         </h1>
         <p className=' px-4 pb-10 text-center text-2xl leading-none text-emerald-50'>
           Вибачте, запитана сторінка не знайдена. Будь ласка, перевірте
@@ -33,7 +33,7 @@ const ErrorPage = () => {
         <div className='text-center'>
           <button
             onClick={goBack}
-            className='bg-amber mb-10 h-10 w-44 text-wrap rounded-md border text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50'
+            className='mb-10 h-10 w-44 text-wrap rounded-md border  bg-blue-700 text-white duration-300 hover:bg-pantone focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50'
           >
             На головну
           </button>
