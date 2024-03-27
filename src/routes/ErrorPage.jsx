@@ -18,7 +18,7 @@ const ErrorPage = () => {
         />
         <img
           className='relative z-20 px-44 md:block'
-          src='https://i.ibb.co/9Vs73RF/undraw-page-not-found-su7k-1-3.png'
+          src='/image/undraw-page-not-found-su7k-1-3.png'
           alt=''
         />
         <h1 className='px-4 pb-12 pt-8 text-center text-7xl font-bold leading-10 text-gray-800'>
