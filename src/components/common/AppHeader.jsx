@@ -1,11 +1,13 @@
 import React from 'react';
+import AuthProvider from '../AuthProvider.jsx';
 
 const AppHeader = () => {
   return (
     <header>
-      <h1 className={'font-playfair-display mb-20 text-center text-8xl'}>
+      <h1 className={'mb-20 text-center font-playfair-display text-8xl'}>
         Hello World!
       </h1>
+      <AuthProvider />
     </header>
   );
 };

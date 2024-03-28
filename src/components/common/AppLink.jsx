@@ -10,12 +10,7 @@ const AppLink = () => {
         AppLink
       </h2>
       <div className={'mb-2 flex justify-center gap-2 '}>
-        <Link
-          className={
-            'flex h-8 w-32 cursor-pointer items-center justify-center rounded-2xl  bg-red-300 text-center font-medium text-black duration-300 hover:bg-orange-500 hover:text-blue-50 focus:bg-orange-500 focus:text-blue-50'
-          }
-          to={'/'}
-        >
+        <Link className={'link-style'} to={'/'}>
           <span className={'pr-2'}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -34,12 +29,7 @@ const AppLink = () => {
           </span>
           Home
         </Link>
-        <Link
-          className={
-            'flex h-8 w-32 cursor-pointer items-center justify-center rounded-2xl bg-red-300  text-center font-medium text-black transition-all duration-300 hover:bg-orange-500 hover:text-blue-50 focus:bg-orange-500 focus:text-blue-50'
-          }
-          to={'/devs'}
-        >
+        <Link className={'link-style'} to={'/devs'}>
           Developer
         </Link>
       </div>
