@@ -4,7 +4,7 @@ const HeaderUserData = ({ handleLogout, user }) => {
   return (
     <div
       className={
-        'info-shadow ml-4 w-full max-w-80  rounded-2xl border-blueViolet px-2  py-2'
+        'info-shadow mr-4 w-full max-w-80  rounded-2xl border-blueViolet px-2  py-2'
       }
     >
       <div className={'flex justify-between'}>

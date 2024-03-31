@@ -3,10 +3,8 @@ import AuthProvider from '../AuthProvider.jsx';
 
 const AppHeader = () => {
   return (
-    <header>
-      <h1 className={'mb-4 text-center font-playfair-display text-8xl'}>
-        Hello World!
-      </h1>
+    <header className={'my-4 flex items-center justify-between'}>
+      <h1 className={'font-playfair-display text-8xl'}>Hello World!</h1>
       <AuthProvider />
     </header>
   );
