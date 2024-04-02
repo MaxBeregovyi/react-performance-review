@@ -53,7 +53,7 @@ const AuthProvider = () => {
         <AppBtnGitHubAuth startGitHubLogin={startGitHubLogin} />
         <AppBtnGoogleAuth startGoogleLogin={startGoogleLogin} />
         <Link
-          className='mb-2 me-2 inline-flex items-center justify-center rounded-lg bg-orange-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#4285F4]/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50 dark:focus:ring-[#4285F4]/55'
+          className='mb-2 me-2 inline-flex items-center justify-center rounded-lg bg-orange-500 px-5 py-2.5 text-center text-sm font-medium text-white duration-300 hover:bg-[#4285F4]/90 focus:outline-none focus:ring-4 focus:ring-[#4285F4]/50 dark:focus:ring-[#4285F4]/55'
           to={'/reg'}
         >
           Creat account

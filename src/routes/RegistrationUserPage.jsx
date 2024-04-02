@@ -21,15 +21,19 @@ const RegistrationUserPage = () => {
   return (
     <>
       <div className={'container'}>
-        <h2 className={'flex justify-center text-5xl text-blue-300'}>
+        <h2
+          className={
+            'mb-4 flex justify-center font-playfair-display text-5xl text-blue-300'
+          }
+        >
           Registration Page
         </h2>
-        <div className={'inline-flex flex-col items-center'}>
+        <div className={'inline-flex flex-col items-center gap-3'}>
           <input
             value={userEmail}
             onChange={(event) => setUserEmail(event.target.value)}
             className={
-              'mb-2 block rounded-2xl border-2 border-[#24292F] bg-transparent pl-3 text-white'
+              'block rounded-2xl border-2 border-[#24292F] bg-transparent pl-3 text-white'
             }
             placeholder={'Email'}
             type='text'
@@ -40,7 +44,7 @@ const RegistrationUserPage = () => {
             value={userPass}
             onInput={(event) => setUserPass(event.target.value)}
             className={
-              'mb-2 block rounded-2xl border-2 border-[#24292F] bg-transparent pl-3 text-white'
+              'block rounded-2xl border-2 border-[#24292F] bg-transparent pl-3 text-white'
             }
             type='password'
             name='password'

@@ -11,13 +11,27 @@ body {
 
     background: rgb(58, 59, 180);
     background: linear-gradient(90deg, rgba(58, 59, 180, 1) 23%, rgba(197, 29, 253, 1) 76%, rgba(252, 69, 121, 1) 100%);
+    transition: 1s;
 
 }
+
+body.dark-mode {
+    background: #24292F;
+    color: white;
+    transition: .8s;
+}
+
+body.dark-mode .link-style {
+    @apply flex h-8 w-32 cursor-pointer items-center justify-center rounded-2xl  bg-azure  text-center text-sm text-white font-medium hover:bg-orange-500 hover:text-blue-50 focus:bg-orange-500 focus:text-[#24292F] focus:font-bold
+    duration-300
+}
+
 
 .link-style {
 
-    @apply flex h-8 w-32 cursor-pointer items-center justify-center rounded-2xl  bg-[#24292F]  text-center text-sm text-white font-medium duration-300 hover:bg-orange-500 hover:text-blue-50 focus:bg-orange-500 focus:text-[#24292F] focus:font-bold
+    @apply flex h-8 w-32 cursor-pointer items-center justify-center rounded-2xl  bg-[#24292F]  text-center text-sm text-white font-medium hover:bg-orange-500 hover:text-blue-50 focus:bg-orange-500 focus:text-[#24292F] focus:font-bold duration-300
 }
+
 
 .info-shadow {
     -webkit-box-shadow: 0 3px 5px 5px rgba(0, 0, 0, 0.40);
