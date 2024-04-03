@@ -4,25 +4,30 @@ const HeaderUserData = ({ handleLogout, user }) => {
   return (
     <div
       className={
-        'info-shadow mr-4 w-full max-w-80  rounded-2xl border-blueViolet px-2  py-2'
+        'info-shadow mr-4 w-full max-w-[340px] rounded-2xl border-blueViolet px-2  py-2'
       }
     >
       <div className={'flex justify-between'}>
-        <img
-          className={'w-20 rounded-2xl'}
-          src={user.photoURL}
-          alt={user.displayName}
-        />
-        <button onClick={handleLogout} className='link-style max-w-20'>
+        {user.photoURL && (
+          <img
+            className={'w-20 rounded-2xl'}
+            src={user.photoURL}
+            alt={user.displayName}
+          />
+        )}
+
+        <button onClick={handleLogout} className='link-style  max-w-20 '>
           Log out
         </button>
       </div>
-      <h2 className={'font-bold '}>
-        User name:{' '}
-        <span className={'font-medium text-tiffanyBlue'}>
-          {user.displayName}
-        </span>
-      </h2>
+      {user.displayName && (
+        <h2 className={'font-bold '}>
+          User name:{' '}
+          <span className={'font-medium text-tiffanyBlue'}>
+            {user.displayName}
+          </span>
+        </h2>
+      )}
       <h2 className={'font-bold'}>
         Email:{' '}
         <span className={'font-medium text-tiffanyBlue'}>{user.email}</span>

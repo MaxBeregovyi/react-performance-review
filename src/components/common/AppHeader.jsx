@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AuthProvider from '../AuthProvider.jsx';
+import AuthProvider from './AuthProvider.jsx';
 
 const AppHeader = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);

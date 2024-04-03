@@ -39,7 +39,7 @@ const AppLink = () => {
           Home
         </Link>
         {routersPath.map((route, index) => (
-          <Link className={'link-style'} to={route.link}>
+          <Link key={index} className={'link-style'} to={route.link}>
             {route.title}
           </Link>
         ))}

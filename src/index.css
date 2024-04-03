@@ -26,10 +26,18 @@ body.dark-mode .link-style {
     duration-300
 }
 
+body.dark-mode .reg-input {
+    @apply block rounded-2xl border-2 border-orange-500 bg-transparent pl-3 text-white
+}
+
 
 .link-style {
 
     @apply flex h-8 w-32 cursor-pointer items-center justify-center rounded-2xl  bg-[#24292F]  text-center text-sm text-white font-medium hover:bg-orange-500 hover:text-blue-50 focus:bg-orange-500 focus:text-[#24292F] focus:font-bold duration-300
+}
+
+.reg-input {
+    @apply block rounded-2xl border-2 border-[#24292F] bg-transparent pl-3 text-white
 }
 
 
