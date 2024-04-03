@@ -23,8 +23,8 @@ const AppHeader = () => {
             />
           ) : (
             <img
-              className={'w-8'}
-              src='/image/theme/dark-theme.svg'
+              className={'w-9'}
+              src='/image/theme/moon-stars-svgrepo-com%20(1).svg'
               alt='dark-theme'
             />
           )}
