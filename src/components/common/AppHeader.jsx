@@ -17,13 +17,13 @@ const AppHeader = () => {
         <button onClick={toggleDarkMode}>
           {isDarkMode ? (
             <img
-              className={'w-8'}
+              className={'mb-2 w-8'}
               src='/image/theme/sun-light-theme-svgrepo-com.svg'
               alt='light-theme'
             />
           ) : (
             <img
-              className={'w-9'}
+              className={'mb-2 w-8'}
               src='/image/theme/moon-stars-svgrepo-com%20(1).svg'
               alt='dark-theme'
             />

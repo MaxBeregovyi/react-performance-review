@@ -17,21 +17,22 @@ const RegistrationUserPage = () => {
     createUserWithEmailAndPassword(auth, userEmail, userPass)
       .then((userData) => {
         setUserEmail('');
-        setUserEmail('');
+        setUserPass('');
 
         console.log(userData);
         setDoc(doc(db, 'users', userData.user.uid), {
           email: userData.user.email,
+          id: userData.user.uid,
         })
           .then(() => {
-            navigate('/');
+            navigate('/devs/' + userData.user.uid);
           })
           .catch((e) => {
-            console.error(e.message);
+            alert(e.message);
           });
       })
       .catch((e) => {
-        console.error(e.message);
+        alert(e.message);
       });
   };
 
@@ -40,7 +41,7 @@ const RegistrationUserPage = () => {
       <h2 className={'mb-8 flex justify-center text-5xl text-blue-300'}>
         Registration Page
       </h2>
-      <div className={' flex flex-col items-center justify-center gap-3'}>
+      <div className={' flex flex-col items-center gap-3'}>
         <input
           onInput={() => setUserEmail(event.target.value)}
           className={'reg-input'}
@@ -49,6 +50,7 @@ const RegistrationUserPage = () => {
           name='email'
           autoComplete={'email'}
         />
+
         <input
           onInput={() => setUserPass(event.target.value)}
           className={'reg-input'}
@@ -57,6 +59,7 @@ const RegistrationUserPage = () => {
           placeholder={'Password'}
           autoComplete={'current-password'}
         />
+
         <button className={'link-style'}>Register</button>
       </div>
     </form>
