@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import AuthProvider from './AuthProvider.jsx';
+import { useSelector } from 'react-redux';
 
 const AppHeader = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  let selectedLang = useSelector(
+    (state) => state.tableFilterReducer.selectedLanguage,
+  );
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevState) => !prevState);
@@ -31,6 +35,7 @@ const AppHeader = () => {
         </button>
         <h1 className={'font-playfair-display text-8xl'}>Hello World!</h1>
       </div>
+      current selected lang = {selectedLang}
       <AuthProvider />
     </header>
   );
