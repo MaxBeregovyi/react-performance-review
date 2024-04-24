@@ -6,7 +6,6 @@ import App from './App.jsx';
 import DevelopersPage from './routes/DevelopersPage.jsx';
 import UsersPage from './routes/UsersPage.jsx';
 import SingleDeveloperPage from './routes/SingleDeveloperPage.jsx';
-import { createBrowserRouter } from 'react-router-dom';
 
 let routes = [
   {

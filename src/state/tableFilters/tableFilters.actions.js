@@ -1,8 +1,18 @@
-export const updateSelectedLanguage = (language) => ({
-  type: 'UPDATE_SELECTED_LANGUAGE',
-  payload: language,
+import {
+  UPDATE_SELECTED_LANGUAGE,
+  UPDATE_LAST_REVIEW,
+  GET_AVAILABLE_LANGUAGES,
+} from './tableFilters.constants.js';
+
+export const updateSelectedLanguageActions = (payload) => ({
+  type: UPDATE_SELECTED_LANGUAGE,
+  payload,
 });
-export const updateReview = (date) => ({
-  type: 'UPDATE_REVIEW',
-  payload: date,
+export const updateReviewActions = (payload) => ({
+  type: UPDATE_LAST_REVIEW,
+  payload,
+});
+export const getAvailableLanguagesActions = (payload) => ({
+  type: GET_AVAILABLE_LANGUAGES,
+  payload,
 });

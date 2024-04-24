@@ -2,15 +2,17 @@ import { Link } from 'react-router-dom';
 import { getFirestore, getDocs, collection, query } from 'firebase/firestore';
 import { app } from '../firebase.js';
 import { useEffect, useState } from 'react';
-import { data } from 'autoprefixer';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateSelectedLanguage } from '../state/tableFilters/tableFilters.actions.js';
+import { updateSelectedLanguageActions } from '../state/tableFilters/tableFilters.actions.js';
+import { getLanguages } from '../state/tableFilters/tableFilters.thunk.js';
 
 const DevelopersPage = () => {
   const db = getFirestore(app);
   let [devs, setDevs] = useState([]);
   let [loading, setLoading] = useState(true);
-  let [languages, setLanguages] = useState(['All']);
+  let languages = useSelector(
+    (state) => state.tableFilterReducer.availableLanguages,
+  );
   let selectedLang = useSelector(
     (state) => state.tableFilterReducer.selectedLanguage,
   );
@@ -33,30 +35,9 @@ const DevelopersPage = () => {
       });
   };
 
-  const getLanguages = () => {
-    if (languages.length <= 1) {
-      getDocs(query(collection(db, 'language')))
-        .then((q) => {
-          let temp = [];
-          q.forEach((item) => {
-            temp.push(item.data());
-          });
-          return temp;
-        })
-        .then((res) =>
-          setLanguages(() => (languages = [{ id: 999, name: 'All' }, ...res])),
-        )
-
-        .catch((e) => alert(e))
-        .finally(() => {
-          setLoading(() => (loading = false));
-        });
-    }
-  };
-
   useEffect(() => {
     getDevs();
-    getLanguages();
+    dispatch(getLanguages());
   }, []);
 
   return (
@@ -69,7 +50,7 @@ const DevelopersPage = () => {
           <li key={index}>
             <button
               onClick={() => {
-                dispatch(updateSelectedLanguage(item.name));
+                dispatch(updateSelectedLanguageActions(item.name));
               }}
               className={`${
                 selectedLang.toLowerCase() === item?.name?.toLowerCase()
@@ -86,7 +67,7 @@ const DevelopersPage = () => {
         <div className={'table__row grid grid-cols-4'}>
           <div className='table__cell'>User name</div>
           <div className='table__cell'>User email</div>
-          <div className='table__cell'>User id</div>
+          <div className='table__cell'>User Language</div>
           <div className='table__cell'>User page</div>
         </div>
         {!loading
@@ -94,7 +75,7 @@ const DevelopersPage = () => {
               <div className={'table__row mx-auto grid grid-cols-4 '}>
                 <div className='table__cell'>{user?.name || 'N/A'}</div>
                 <div className='table__cell'>{user.email}</div>
-                <div className='table__cell'>{user.id}</div>
+                <div className='table__cell'>{user.language}</div>
                 <div className='table__cell'>
                   <Link to={`/devs/${user.id}`}>Go to user >></Link>
                 </div>
