@@ -1,12 +1,13 @@
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from './root.reducer.js';
+import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
-import { thunk } from 'redux-thunk';
+import tableFilter from '../state/tableFilters/tableFilters.slice.js';
 
-const logger = createLogger({
-  collapsed: true,
+const store = configureStore({
+  reducer: {
+    tableFilter,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(createLogger({ collapsed: true })),
 });
-
-const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 export default store;
